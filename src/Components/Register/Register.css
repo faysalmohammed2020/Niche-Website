@@ -1,0 +1,26 @@
+.register-form {
+    margin-top: 50px;
+    margin-left: 100px;
+    padding: 2px;
+
+}
+input{
+margin: 5px;
+}
+
+.submit {
+border: 2px solid red;
+border-radius: 10px;
+padding-left: 30px;
+padding-right: 30px;
+margin-left: 50px;
+}
+.register {
+display: flex;
+margin-left: 200px;
+margin-top: 100px;
+background: #180D5B;
+border-radius: 150px;
+padding: 100px;
+margin-right: 200px;
+}

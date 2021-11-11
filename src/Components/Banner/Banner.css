@@ -1,0 +1,12 @@
+.banner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 150px;
+    /* padding-left: 100px; */
+    /* margin-left: 150px; */
+    margin-top: 50px;
+}
+.Banner-text{
+     margin-top: 80px; 
+     padding-left: 50px;
+}

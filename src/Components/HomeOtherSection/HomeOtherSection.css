@@ -1,0 +1,27 @@
+.counter-container{
+    margin-top: 150px;
+}
+
+
+
+.counter{
+    display: flex;
+     justify-content: space-evenly;
+     margin-top: 20px;
+    /* margin-left: 20px; */
+    
+    
+}
+.counter-section{
+    background-image: url(../../images/bannerbg.jpg);
+    background-size: cover;
+    padding-top: 10px;
+    
+}
+.counter-text{
+    color: white;
+    text-align: center;
+    padding: 0px;
+    font-weight: 800;
+    font-size: 15px;
+}
