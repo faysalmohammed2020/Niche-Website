@@ -56,6 +56,14 @@ const Header = () => {
             borderRadius:'10px'
             }}
              to="/MyOrder">My Order</NavLink> :"" }
+        {user.email?<NavLink activeStyle={{
+            fontWeight: "bold",
+            color: "white",
+            background: '#F85C37',
+            padding:'10px',
+            borderRadius:'10px'
+            }}
+             to="/Dashboard">Dashboard</NavLink> :"" }
         <span className="Displayname">{user.displayName}</span>
         <img src={user.photoURL} className="userimg"/>
        
