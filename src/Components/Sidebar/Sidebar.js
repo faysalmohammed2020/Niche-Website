@@ -16,9 +16,10 @@ const Sidebar = () => {
         {admin && <div>
             <li><Link to="/MakeAdmin">Add Admin</Link></li> 
             <li><Link to="/ManageAllOrder">Manage All Order</Link></li>
+            <li><Link to="/AddService">Add Service</Link></li>
             </div>}
             <li><Link to="/MyOrder">My Order</Link></li>
-            <li><Link to="/AddService">Add Service</Link></li>
+
             <li><Link to="/AddReview">Add Review</Link></li>
             
             <li><Link to="/AllProducts">All Products</Link></li>

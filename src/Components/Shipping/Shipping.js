@@ -1,7 +1,7 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
-import { useForm } from "react-hook-form";
-import './Shipping.css';
+import './Shipping.css'
 
 const Shipping = () => {
     const{user} = useAuth();
@@ -17,7 +17,7 @@ const Shipping = () => {
       <input {...register("city")} placeholder="City" />
       <input {...register("Adress") } placeholder="Enter Your Address" />
       <input type="number" {...register("Number") } placeholder="Enter Your Number" />
-      <input type="submit" className="btn btn-success"/>
+      <input type="submit" className="btn btn-primary"/>
     </form>   
         </div>
         </div>

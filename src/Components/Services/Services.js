@@ -13,18 +13,18 @@ const Services = () => {
        ,[]);
 
 
-       const handleBooking = (index) =>{
-          const bookData =  services[index];
-          bookData.email = user.email;
-          bookData.Status = "Pending";
-          console.log(bookData)
+       const handleBuy = (index) =>{
+          const buyData =  services[index];
+          buyData.email = user.email;
+          buyData.Status = "Pending";
+          console.log(buyData)
           
           fetch('http://localhost:5000/addOrders',{
             method:'post',
             headers:{
               'content-type':'application/json'
             },
-            body: JSON.stringify(bookData)
+            body: JSON.stringify(buyData)
             
           })
           .then(res => res.json())
@@ -50,7 +50,7 @@ const Services = () => {
                     
                    
             
-                <button href="#" className="btn btn-outline-primary" onClick={()=> handleBooking(index)} >Book Now</button>
+                <button href="#" className="btn btn-outline-primary" onClick={()=> handleBuy(index)} >Buy Now</button>
                 
                 </div>
         </div>
