@@ -28,7 +28,7 @@ const Register = () => {
                  return;
              }
             
-            registerUser(registerInfo.email , registerInfo.password,history);
+            registerUser( registerInfo.email , registerInfo.password,registerInfo.name,history);
             e.preventDefault();
 
 
@@ -41,7 +41,7 @@ const Register = () => {
             <h1 style={{color:'white'}}>Register</h1>
             {user?.email && <Alert severity="success">User Created successfully!</Alert>}
             {!isLoading &&<form onSubmit={handleregister} >
-                {/* <input type="text" placeholder="Enter your name" name="name" onChange={handleOnChange}/><br/> */}
+                 <input type="text" placeholder="Enter your name" name="name" onChange={handleOnChange}/><br/> 
                 <input type="email" placeholder="Enter your email" name="email" onChange={handleOnChange}/><br/>
                 <input type="password" placeholder="Password" name="password" onChange={handleOnChange}/><br/>
                 <input type="password" placeholder="Re-Type Password" name="password2" onChange={handleOnChange}/><br/>

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
-import './AllProducts.css';
-const AllProducts = () => {
+import './Services.css';
+
+const Services = () => {
     const {user} = useAuth();
     
     const[services,setServices] =useState([]);
        useEffect(()=>
        fetch('http://localhost:5000/services')
        .then(res => res.json())
-       .then(data => setServices(data))
+       .then(data => setServices(data.slice(0,6)))
        ,[]);
 
 
@@ -32,7 +33,7 @@ const AllProducts = () => {
        }
     return (
         <div>
-            <h1 className="text-center">All Products</h1>
+            <h1 className="text-center">Our Products</h1>
         <div className ="service-container">
             
             <div className="service">
@@ -61,4 +62,4 @@ const AllProducts = () => {
     );
 };
 
-export default AllProducts;
+export default Services;

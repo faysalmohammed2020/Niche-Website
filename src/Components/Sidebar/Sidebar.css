@@ -2,4 +2,14 @@
     height: 670px;
     width: 300px;
     background: #314051;
+    margin-top: -66px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+ul li{
+    list-style: none;
+    margin-top: 20px;
 }

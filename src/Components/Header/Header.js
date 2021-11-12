@@ -23,22 +23,7 @@ const Header = () => {
        borderRadius:'10px'
        }}
         to="/Home">Home</NavLink>
-            <NavLink activeStyle={{
-       fontWeight: "bold",
-       color: "white",
-       background: '#F85C37',
-       padding:'10px',
-       borderRadius:'10px'
-       }}
-        to="/About">About</NavLink>
-            <NavLink activeStyle={{
-       fontWeight: "bold",
-       color: "white",
-       background: '#F85C37',
-       padding:'10px',
-       borderRadius:'10px'
-       }}
-        to="/Contact">Contact</NavLink>
+            
             
             {/* <NavLink activeStyle={{
        fontWeight: "bold",
@@ -48,14 +33,7 @@ const Header = () => {
        borderRadius:'10px'
        }}
         to="/Register">Register/Login</NavLink> */}
-        {user.email?<NavLink activeStyle={{
-            fontWeight: "bold",
-            color: "white",
-            background: '#F85C37',
-            padding:'10px',
-            borderRadius:'10px'
-            }}
-             to="/MyOrder">My Order</NavLink> :"" }
+        
         {user.email?<NavLink activeStyle={{
             fontWeight: "bold",
             color: "white",
@@ -64,7 +42,7 @@ const Header = () => {
             borderRadius:'10px'
             }}
              to="/Dashboard">Dashboard</NavLink> :"" }
-        <span className="Displayname">{user.displayName}</span>
+        <span className="Displayname" style={{color:'white'}}>{user.displayName}</span>
         <img src={user.photoURL} className="userimg"/>
        
         

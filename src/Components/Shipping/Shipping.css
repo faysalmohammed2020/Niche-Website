@@ -1,0 +1,27 @@
+.proceed-orders form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 210px;
+    
+    padding: 50px;
+}
+.proceed-orders form input{
+    width: 40%;
+    margin-bottom: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+  }
+.shipping-title{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+.Shipping{
+    background: url(../../images/bannerbg.jpg);
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 80px;
+}
