@@ -8,29 +8,32 @@ import useAuth from '../../hooks/useAuth';
 
 const googleProvider = new GoogleAuthProvider();
 const Login = () => {
-    const{loginUser} = useAuth();
+    const{loginUser,saveUser} = useAuth();
     const[loginInfo ,setLoginInfo] = useState({});
 
     const[user,setUser] =useState({})
+     const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from  || '/Dashboard';
+    console.log('came from',location.state?.from);
      const handleGoogleSignIn = () =>{
         const auth = getAuth();
         signInWithPopup(auth, googleProvider)
         .then((result) =>{
             const{displayName,email} = result.user;
+            
             const loggeduser ={
                 name: displayName,
                 mail: email
             }
+
           setUser(loggeduser);
+          saveUser(user.email , user.displayName ,'PUT')
+          history.push(redirect_url)
         })
     }
 
-    const location = useLocation();
-    const history = useHistory();
-
-   
-
-        const handleOnChange = e =>{
+            const handleOnChange = e =>{
             const field = e.target.name;
             const value = e.target.value;
             const newloginInfo = { ...loginInfo };

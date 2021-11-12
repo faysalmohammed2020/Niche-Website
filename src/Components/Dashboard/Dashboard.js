@@ -2,7 +2,17 @@ import React from 'react';
 import useAuth from '../../hooks/useAuth';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import Sidebar from '../Sidebar/Sidebar';
-import './Dashboard.css'
+import './Dashboard.css';
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams,
+    useRouteMatch
+  } from "react-router-dom";
+  
 
 const Dashboard = () => {
     const {user} = useAuth();
@@ -17,6 +27,14 @@ const Dashboard = () => {
   <div className="card-body">
   <img src={user.photoURL} className="userimg" />
   Hello,{user.displayName}
+
+
+  {/* <Switch>
+
+        <Route path={`${path}/MakeAdmin`}>
+         <MakeAdmin></MakeAdmin>
+        </Route>
+      </Switch> */}
   </div>
 </div>
 </div>

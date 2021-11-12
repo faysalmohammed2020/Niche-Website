@@ -23,16 +23,17 @@ const Header = () => {
        borderRadius:'10px'
        }}
         to="/Home">Home</NavLink>
-            
-            
-            {/* <NavLink activeStyle={{
+           <NavLink activeStyle={{
        fontWeight: "bold",
        color: "white",
-       background: '#FF284F',
+       background: '#F85C37',
        padding:'10px',
        borderRadius:'10px'
        }}
-        to="/Register">Register/Login</NavLink> */}
+        to="/AllProducts">All Products</NavLink>
+            
+            
+            
         
         {user.email?<NavLink activeStyle={{
             fontWeight: "bold",

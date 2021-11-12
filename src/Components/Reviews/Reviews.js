@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import './Reviews.css'
 const Reviews = () => {
-    const {user} = useAuth();
+    
     
     const[reviews,setReviews] =useState([]);
        useEffect(()=>
@@ -21,8 +21,8 @@ const Reviews = () => {
     <div className="review-container">
     <div className="card" >
             <div className="card-body">
-            <img src={user.photoURL} className="userimg"/>
-                <h5 className="card-title">{user.displayName}</h5>
+            
+                <h5 className="card-title">{reviews?.DisplayName}</h5>
                 
                 <p className="card-text">{reviews?.description}</p>
                 <p className="card-text"> {reviews?.review}</p>

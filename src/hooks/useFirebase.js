@@ -8,6 +8,7 @@ const useFirebase = () =>{
     const[user,setUser] =useState({});
     const[error,setError] = useState('');
     const[isLoading,setIsLoading] = useState(true);
+    const[admin,setAdmin] = useState(false);
     const auth = getAuth();
     
     const registerUser = (email, password,name ,history) => {
@@ -19,7 +20,7 @@ const useFirebase = () =>{
                 console.log(newUser);
                 setUser(newUser);
                 // save user to the database
-                saveUser(email, name);
+                saveUser(email, name , 'POST');
                 // send name to firebase after creation
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -61,11 +62,20 @@ const useFirebase = () =>{
         setIsLoading(true);
         
         return signInWithPopup(auth, provider)
-        .then(result =>setUser(result.user))
+        .then(result =>{
+            setUser(result.user)
+            
+        
+        })
         .finally(()=> setIsLoading(false))
           
         
     }
+    useEffect(()=>{
+        fetch(`http://localhost:5000/users/${user.email}`)
+        .then(res => res.json())
+        .then(data => setAdmin(data.admin))
+    },[user.email])
     const logOut = () =>{
         setIsLoading(true);
        signOut(auth)
@@ -90,10 +100,10 @@ const useFirebase = () =>{
     },[])
 
 
-const saveUser = (email,displayName) =>{
+const saveUser = (email,displayName,method) =>{
     const user = {email,displayName};
     fetch('http://localhost:5000/users',{
-        method : 'POST',
+        method : method,
         headers :{
             'content-type' : 'application/json',
         },
@@ -104,9 +114,11 @@ const saveUser = (email,displayName) =>{
 
     return{
         user,
+        admin,
         registerUser,
         signInWithGoogle,
         loginUser,
+        saveUser,
         logOut,
         isLoading,
         error
