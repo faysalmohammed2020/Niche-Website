@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import Rating from 'react-rating';
 import './Reviews.css'
 const Reviews = () => {
     
@@ -25,7 +26,14 @@ const Reviews = () => {
                 <h5 className="card-title">{reviews?.DisplayName}</h5>
                 
                 <p className="card-text">{reviews?.description}</p>
-                <p className="card-text"> {reviews?.review}</p>
+                <Rating 
+                initialRating={reviews?.review}
+                emptySymbol="far fa-star star-color"
+                fullSymbol="fas fa-star star-color"
+                readonly/>
+                
+  
+                
                 
     </div>
     </div>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
+import './AddReview.css';
 
 const AddReview = () => {
 //     const {user} = useAuth
@@ -26,13 +27,13 @@ const onSubmit = data => {
 
   };
     return (
-        <div className="Shipping">
-            <h1 className="shipping-title text-sucess"> Reviews Form</h1>
-        <div className="proceed-orders">
+        <div className="Review">
+            <h1 className="review-title text-sucess"> Reviews Form</h1>
+        <div className="proceed-review">
         <form onSubmit={handleSubmit(onSubmit)}>
       <input {...register("DisplayName") } defaultValue={user.displayName}/>
       <textarea {...register("description")} placeholder="Enter Reviews"/>
-      <input  {...register("review")} placeholder="give review as number (0-5) Star" />
+      <input  type=" Number "{...register("review")} placeholder="give review as number (0-5) " />
       <input type="submit" className="btn btn-success"/>
     </form>   
         </div>
@@ -40,21 +41,7 @@ const onSubmit = data => {
     );
 
   };
-    //return (
-    //     <div className="add-service">
-    //         <h3>Add  Service</h3>
-    //         <p>{user.displayName}</p>
-    //         {/* <form onSubmit={handleSubmit(onSubmit)}>
-    //     <input {...register("displayName") } defaultValue={user.displayName}/>
-    //   <input {...register("email")} defaultValue={user.email} />
-    //   <textarea {...register("description")} placeholder="Enter Reviews"/>
-    //   <input type="number" {...register("review")} placeholder="give review as number (0-5)"/>
-    //   <button type="submit" className="btn btn-danger">Add review</button> */}
-    // {/* </form> */}
-  
-
-    //     </div>
-    // );
+    
     
 
 
