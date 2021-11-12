@@ -32,7 +32,7 @@ const Services = () => {
         
        }
     return (
-        <div>
+        <div className="services-section">
             <h1 className="text-center">Our Products</h1>
         <div className ="service-container">
             

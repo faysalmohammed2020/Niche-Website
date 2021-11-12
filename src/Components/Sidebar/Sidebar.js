@@ -1,19 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Sidebar.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useParams,
-    useRouteMatch
-  } from "react-router-dom";
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
+
 
 const Sidebar = () => {
     const{user,admin} = useAuth();
-    //let { path, url } = useRouteMatch();
     return (
         <div className="sidebar">
             
@@ -32,12 +24,7 @@ const Sidebar = () => {
             <li><Link to="/AllProducts">All Products</Link></li>
             <li><Link to="/PayMent">Pay Ment</Link></li>
         </ul>
-        {/* <Switch>
-
-        <Route path={`${path}/MakeAdmin`}>
-         <MakeAdmin></MakeAdmin>
-        </Route>
-      </Switch> */}
+        
         </div>
     );
 };

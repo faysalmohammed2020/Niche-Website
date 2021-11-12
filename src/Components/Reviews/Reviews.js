@@ -11,7 +11,7 @@ const Reviews = () => {
        .then(data => setReviews(data))
        ,[]);
     return (
-        <div>
+        <div className="review-header">
         <h1 className="text-center">Our Clints Reviews</h1>
     <div className ="reviews-container">
         

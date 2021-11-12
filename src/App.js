@@ -15,6 +15,8 @@ import ManageAllOrder from "./Components/ManageAllOrder/ManageAllOrder";
 import AllProducts from "./Components/AllProducts/AllProducts";
 import MakeAdmin from "./Components/MakeAdmin/MakeAdmin";
 import Shipping from "./Components/Shipping/Shipping";
+import NotFound from "./Components/NotFound/NotFound";
+import Footer from "./Components/Footer/Footer";
 
 
 function App() {
@@ -61,13 +63,18 @@ function App() {
       <Route path="/AllProducts">
       <AllProducts></AllProducts>
       </Route> 
+      
       <PrivateRoute exact path="/PayMent">
       <PayMent></PayMent>
       </PrivateRoute> 
       <PrivateRoute path = "/MyOrder">
          <MyOrder></MyOrder>
       </PrivateRoute> 
-      </Switch>    
+      <Route exact path="*">
+      <NotFound></NotFound>
+      </Route> 
+      </Switch>   
+      <Footer></Footer> 
       </BrowserRouter>
     </AuthProvider>
   );

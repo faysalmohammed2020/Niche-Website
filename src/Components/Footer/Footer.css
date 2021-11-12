@@ -1,0 +1,17 @@
+.footer{
+    background-color: #262626;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin-top: 0px;
+    
+}
+.footer p{
+    margin-top: 10px;
+}
+.footer-menu a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: aqua;
+    margin-bottom: 25px;
+}
