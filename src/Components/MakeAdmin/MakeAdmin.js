@@ -13,7 +13,7 @@ const MakeAdmin = () => {
   const handleadmin = e =>{
     e.preventDefault();
      const user ={email};
-    fetch('http://localhost:5000/users/admin',{
+    fetch('https://glacial-ridge-81046.herokuapp.com/users/admin',{
         method : 'PUT',
         headers :{
             'content-type' : 'application/json',

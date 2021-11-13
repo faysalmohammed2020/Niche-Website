@@ -16,7 +16,7 @@ const MyOrder = () => {
     const handleDelete = (id) =>{
         const proceed = window.confirm("Are you Want To Delete Order?")
         if(proceed){
-        const url =`http://localhost:5000/myOrders/${id}`;
+        const url =`https://glacial-ridge-81046.herokuapp.com/myOrders/${id}`;
         fetch(url,{
             method :'DELETE',
         })

@@ -6,7 +6,7 @@ const AllProducts = () => {
     
     const[services,setServices] =useState([]);
        useEffect(()=>
-       fetch('http://localhost:5000/services')
+       fetch('https://glacial-ridge-81046.herokuapp.com/services')
        .then(res => res.json())
        .then(data => setServices(data))
        ,[]);
@@ -18,7 +18,7 @@ const AllProducts = () => {
           bookData.Status = "Pending";
           console.log(bookData)
           
-          fetch('http://localhost:5000/addOrders',{
+          fetch('https://glacial-ridge-81046.herokuapp.com/addOrders',{
             method:'post',
             headers:{
               'content-type':'application/json'

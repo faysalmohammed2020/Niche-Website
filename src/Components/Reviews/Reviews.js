@@ -7,7 +7,7 @@ const Reviews = () => {
     
     const[reviews,setReviews] =useState([]);
        useEffect(()=>
-       fetch('http://localhost:5000/addreview')
+       fetch('https://glacial-ridge-81046.herokuapp.com/addreview')
        .then(res => res.json())
        .then(data => setReviews(data))
        ,[]);

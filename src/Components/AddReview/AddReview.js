@@ -17,7 +17,7 @@ const { register, handleSubmit,reset } = useForm();
 const onSubmit = data => {
     console.log(data)
 
-    axios.post('http://localhost:5000/addreview',data)
+    axios.post('https://glacial-ridge-81046.herokuapp.com/addreview',data)
     .then(res => {
         if(res.data.insertedId){
             alert('Reviews Added Successfully');

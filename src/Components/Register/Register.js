@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
+import {  CircularProgress, Alert } from '@mui/material';
 import './Register.css';
 import login from '../../images/login.jpg';
-import { Grid } from '@mui/material';
-import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import { getAuth } from '@firebase/auth';
